@@ -11,7 +11,7 @@
 # from   consol/ubuntu-xfce-vnc
 
 # due to dependency issues vnc is still work in progress
-FROM ubuntu:20.04
+FROM {{ . }}
 
 # Switch to root user to install additional software
 USER 0
@@ -38,5 +38,4 @@ VOLUME ["/data"]
 
 
 # Starting sshd
-#cmd    ["/start.sh"]
-CMD    ["sh"]
+CMD    ["/start.sh"]
